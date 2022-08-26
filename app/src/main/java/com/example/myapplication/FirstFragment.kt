@@ -51,7 +51,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        musicTableManager = DBService.getInstance("db")?.getTableManager("music")!!
+        musicTableManager = DBService.getInstance()?.getTableManager("music")!!
         initDataFromDatabase()
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)

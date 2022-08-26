@@ -10,6 +10,9 @@ import com.example.myapplication.annotation.DBField
 import com.example.myapplication.annotation.DBTable
 import java.lang.IllegalStateException
 
+/**
+ * TableManager auto create/update table,filed by @see{DBField}
+ */
 class TableManager<T>(private val ctx: Context, clazz: Class<T>, dbName: String) {
     private lateinit var db: SQLiteDatabase
     private var tableName: String = ""
